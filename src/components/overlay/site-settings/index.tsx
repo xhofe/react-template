@@ -2,6 +2,7 @@ import React from 'react'
 import { HomeLink } from "./home-link";
 import { ThemeToggle } from "./theme-toggle";
 import { useColorModeValue, Stack } from "@chakra-ui/react";
+import { Language } from './language';
 
 function inIframe() {
   try {
@@ -26,6 +27,7 @@ export default function Ss() {
         roundedLeft="lg"
         bg={useColorModeValue("white", "gray.700")}
       >
+        <Language />
         <HomeLink />
         <ThemeToggle />
       </Stack>
