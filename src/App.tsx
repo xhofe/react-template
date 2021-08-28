@@ -1,12 +1,14 @@
+import { Center, Heading } from '@chakra-ui/react'
 import React from 'react'
 import './App.css'
-import Overlay from './components/overlay'
 
 function App() {
   
   return (
     <div className="App">
-      <Overlay />
+      <Center h="94vh">
+        <Heading>Welcome to react-template.</Heading>
+      </Center>
     </div>
   )
 }
