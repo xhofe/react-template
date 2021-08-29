@@ -6,7 +6,7 @@ function App() {
   
   return (
     <div className="App">
-      <Center h="94vh">
+      <Center h="84%">
         <Heading>Welcome to react-template.</Heading>
       </Center>
     </div>
