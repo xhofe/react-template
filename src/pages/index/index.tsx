@@ -9,11 +9,12 @@ import {
   Image,
   Text,
   Icon,
+  Center,
 } from "@chakra-ui/react";
 
 const KuttyHero = () => {
   return (
-    <Box px={8} py={36} mx="auto">
+    <Center px={8} h="full">
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
@@ -114,7 +115,7 @@ const KuttyHero = () => {
           alt="Hellonext feedback boards software screenshot"
         />
       </Box> */}
-    </Box>
+    </Center>
   );
 };
 
