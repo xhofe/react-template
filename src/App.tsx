@@ -8,7 +8,7 @@ function App() {
   
   return (
     <div className="App">
-      <Center h="94vh">
+      <Center h="84%">
         <Heading>{t('Welcome to React')}</Heading>
       </Center>
     </div>
