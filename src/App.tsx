@@ -1,5 +1,5 @@
-import { Center, Heading } from '@chakra-ui/react'
-import React from 'react'
+import { Center, Heading, Spinner } from '@chakra-ui/react'
+import React, { lazy, Suspense } from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,14 +7,17 @@ import {
   Link
 } from "react-router-dom";
 import './App.css'
-import Swibc from './components/sidebar'
-import KuttyHero from './pages/index';
+// import Swibc from './components/sidebar'
+// import KuttyHero from './pages/index';
+const KuttyHero = lazy(() => import('./pages/index'))
+const Swibc = lazy(() => import('./components/sidebar'))
 
 function App() {
   
   return (
     <div className="App">
       <Router>
+        <Suspense fallback={<Center h='full'><Spinner /></Center>}>
         <Switch>
           <Route path="/index">
             <Swibc />
@@ -23,6 +26,7 @@ function App() {
             <KuttyHero />
           </Route>
         </Switch>
+        </Suspense>
       </Router>
     </div>
   )
