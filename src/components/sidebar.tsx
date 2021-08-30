@@ -1,6 +1,7 @@
 import {
   Avatar,
   Box,
+  Center,
   Collapse,
   Drawer,
   DrawerContent,
@@ -11,6 +12,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
+  Spinner,
   Text,
   useColorModeValue,
   useDisclosure,
@@ -21,9 +23,10 @@ import { BsGearFill } from "react-icons/bs";
 import { FiMenu, FiSearch } from "react-icons/fi";
 import { HiCode, HiCollection } from "react-icons/hi";
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { Link, Route, useRouteMatch } from "react-router-dom";
-import TestPage from "../pages/test";
+// import TestPage from "../pages/test";
+const TestPage = lazy(() => import("../pages/test"));
 
 export default function Swibc() {
   const sidebar = useDisclosure();
@@ -188,9 +191,11 @@ export default function Swibc() {
         <Box as="main" p="4">
           {/* Add content here, remove div below  */}
           <Box borderWidth="4px" borderStyle="dashed" rounded="md" h="96">
+            <Suspense fallback={<Center h='full'><Spinner /></Center>}>
             <Route path={`${match.url}/:to`}>
               <TestPage />
             </Route>
+            </Suspense>
           </Box>
         </Box>
       </Box>
