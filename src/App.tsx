@@ -6,7 +6,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import './App.css'
 // import Swibc from './components/sidebar'
 // import KuttyHero from './pages/index';
 const KuttyHero = lazy(() => import('./pages/index'))
