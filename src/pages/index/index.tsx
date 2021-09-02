@@ -60,7 +60,7 @@ const KuttyHero = () => {
           <Button
             as="a"
             variant="solid"
-            colorScheme="blue"
+            // colorScheme="blue"
             display="inline-flex"
             alignItems="center"
             justifyContent="center"

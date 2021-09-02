@@ -1,4 +1,9 @@
-import { extendTheme, ThemeConfig, ThemeOverride } from "@chakra-ui/react";
+import {
+  extendTheme,
+  ThemeConfig,
+  ThemeOverride,
+  withDefaultColorScheme,
+} from "@chakra-ui/react";
 import { mode, Styles } from "@chakra-ui/theme-tools";
 
 const config: ThemeConfig = {
@@ -24,6 +29,9 @@ const overrides: ThemeOverride = {
   styles,
 };
 
-const theme = extendTheme(overrides);
+const theme = extendTheme(
+  overrides,
+  withDefaultColorScheme({ colorScheme: "purple" })
+);
 
 export default theme;
