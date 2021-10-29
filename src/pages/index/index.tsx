@@ -6,7 +6,6 @@ import {
   useColorModeValue,
   Button,
   Stack,
-  Image,
   Text,
   Icon,
   Center,
@@ -58,7 +57,6 @@ const KuttyHero = () => {
         >
           <ReactLink to="/index">
           <Button
-            as="a"
             variant="solid"
             // colorScheme="blue"
             display="inline-flex"
